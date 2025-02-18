@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
             formContainer.style.display = "none";
             successMessage.style.display = "block";
             successMessage.innerHTML = "Credentials saved successfully!";
-            
+
             setTimeout(function() {
                 window.close();
-            }, 2000);
+            }, 1000);
         });
     });
 });
