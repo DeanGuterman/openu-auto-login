@@ -1,6 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const inputField = document.getElementById("user-id");
+    const inputField = document.getElementById("userId");
     const saveButton = document.getElementById("save");
+
+    if (!inputField) {
+        console.error("Element with ID 'userId' not found");
+        return;
+    }
+
+    if (!saveButton) {
+        console.error("Element with ID 'save' not found");
+        return;
+    }
 
     chrome.storage.sync.get('userId', function(data) {
         if (data.userId) {
@@ -9,11 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     saveButton.addEventListener("click", function() {
-        const userID = inputField.value.trim();
+        console.log("save button clicked");
+        const userID = inputField.value;
         if (userID) {
-            chrome.storage.sync.set({ userId: userID }, function() {
+            chrome.storage.sync.set({userId: userID}, function() {
                 alert("User ID saved successfully!");
             });
+        } else {
+            console.log("no userID");
         }
     })
 });
