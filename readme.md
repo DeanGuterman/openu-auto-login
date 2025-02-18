@@ -1,6 +1,6 @@
 # OpenU Auto Login
 
-A simple browser extension that automatically logs you into the Open University of Israel "Sheilta" website.
+A simple browser extension that automatically logs you into the Open University of Israel 'Sheilta' website.
 
 ## Features
 
