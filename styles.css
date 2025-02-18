@@ -33,6 +33,7 @@ h2 {
 
 input {
     width: 100%;
+    min-height: 30px;
     box-sizing: border-box;
     padding: 8px 12px; /* Reduced padding for a tighter feel */
     margin: 8px 0; /* Reduced space between fields */
@@ -61,6 +62,7 @@ button {
     font-weight: 600;
     transition: background-color 0.3s, transform 0.2s;
     margin-top: 15px; /* Reduced space between the button and the fields */
+    border-radius: 5px;
 }
 
 button:hover {
