@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Automatically fills and submits ID on the Open University's webpage.",
     "permissions": ["storage", "scripting"],
-    "host_permissions": ["https://sso.apps.openu.ac.il/login?T_PLACE=https://sheilta.apps.openu.ac.il/pls/dmyopt2/sheilta.main"],
+    "host_permissions": ["https://sso.apps.openu.ac.il/login?T_PLACE=https://sheilta.apps.openu.ac.il/pls/dmyopt2/sheilta.main", "https://sso.apps.openu.ac.il/process"],
     "action": {
       "default_popup": "popup.html"
     },
@@ -13,7 +13,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://sso.apps.openu.ac.il/login?T_PLACE=https://sheilta.apps.openu.ac.il/pls/dmyopt2/sheilta.main"],
+        "matches": ["https://sso.apps.openu.ac.il/login?T_PLACE=https://sheilta.apps.openu.ac.il/pls/dmyopt2/sheilta.main", "https://sso.apps.openu.ac.il/process"],
         "js": ["content.js"]
       }
     ]
